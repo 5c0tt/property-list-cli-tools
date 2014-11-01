@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# 09/09/12  - 01:26:35 PM — scott@newgeo.com 
+
+# Description:
+# Convert plist files from binary to XML but keep the editing in pico/nano
+# or whatever your default editor is
+
+# Location of default bare minimum built in text editors
+#	/usr/bin/plutil
+#	/usr/bin/nano
+
+# I use `pico`, which symbolic links to nano, but still supports all the 
+# .nanorc files configured in ~/bin/.nanorc
+# /usr/bin/nano Configuration file: ~/bin/.nanorc
+# /usr/bin/pico Configuration file: ~/bin/.nanorc
+
+/usr/bin/plutil -convert xml1 ${1}
+/usr/bin/nano -w ${1}
+/usr/bin/plutil -convert binary1 ${1}
+
+# Success
+exit 0

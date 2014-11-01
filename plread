@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# 09/09/12  - 01:50:34 PM — scot@newgeo.com
+# Convert plist files from BINARY1 to XML1 and send to stdout in real time
+
+# Passed in filename argument number 1, or pipe to `mate` ( TextMate ) `plread.sh om.apple.CalendarAgent.plist | mate`
+FILENAME=${1}
+
+# Begin file exists check
+echo ""
+if [ -f ${FILENAME} ]
+then
+	echo " - Reading File: '${FILENAME}' exists."
+else
+	echo " - Error reading File: '${FILENAME}' DOES NOT exist!"
+	exit 0
+fi
+echo ""
+# End file exists check
+
+# Convert the .plst BINARY1 file to stdout
+plutil -convert xml1 -o /dev/stdout ${FILENAME}
+
+# All worked well, exit with good status
+exit 1
