@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# 09/09/12  - 01:26:35 PM — scott@newgeo.com 
-
 # Description:
 # Convert plist files from binary to XML but keep the editing in pico/nano
 # or whatever your default editor is

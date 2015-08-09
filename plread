@@ -1,8 +1,6 @@
 #!/bin/bash
 
-# 09/09/12  - 01:50:34 PM — scot@newgeo.com
 # Convert plist files from BINARY1 to XML1 and send to stdout in real time
-
 # Passed in filename argument number 1, or pipe to `mate` ( TextMate ) `plread.sh om.apple.CalendarAgent.plist | mate`
 FILENAME=${1}
 
